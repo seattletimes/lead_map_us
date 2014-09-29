@@ -1,0 +1,17 @@
+<div class="statename">{{ state }}</div>
+<div class="cat small">
+  <div class="desc"><strong>Ranges inspected</strong></div>
+  <div class="titlenum">{{ inspected }}</div>
+</div>
+<div class="cat small">
+  <div class="desc"><strong>Total inspections</strong></div>
+  <div class="titlenum">{{ totalInspections }}</div>
+</div>
+<div class="cat">
+  <div class="desc"><strong>Violations</strong><span class="subhead">Lead-related / total</span></div>
+  <div class="titlenum">{{ leadRelated }}<small> / </small>{{ violations }}</div>
+</div>
+<div class="cat">
+  <div class="desc"><strong>Penalties</strong><span class="subhead">Initial / final</span></div>
+  <div class="titlenum">${{ penalty }}<small> / </small>${{ currentPenalty }}</div>
+</div>
