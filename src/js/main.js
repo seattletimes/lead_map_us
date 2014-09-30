@@ -47,10 +47,6 @@ require([
     return "rgb(0,109,44)";
   };
 
-  var commaDelimit = function(a){
-    return a.toString().replace(/(d)(?=(ddd)+(?!d))/g,"$1,");
-  };
-
   for (var fips in census) {
     var state = census[fips];
     state.penalty = Math.round(state.penalty * 1).toLocaleString();
