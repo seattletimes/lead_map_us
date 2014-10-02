@@ -6,6 +6,7 @@
 }
 
 @mobile: ~"(max-width: 480px)";
+@tablet: ~"(max-width: 768px)";
 
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -25,7 +26,7 @@ body {
     border: none; 
     border-bottom: 1px dashed #ccc;
 
-    @media @mobile {
+    @media @tablet {
       display: none;
     }
   }
@@ -33,10 +34,14 @@ body {
   label {
     display: block;
 
-    @media @mobile {
+    @media @tablet {
       float: left;
-      width: 30%;
+      width: 15%;
       margin-bottom: 4px;
+    }
+
+    @media @mobile {
+      width: 30%;
     }
   }
 
@@ -54,8 +59,8 @@ body {
   width: 80px;
   margin-right: 20px;
 
-  @media @mobile {
-    margin-top: 0;
+  @media @tablet {
+    margin-top: 40px;
     display: block;
     float: none;
     width: 100%;
@@ -76,6 +81,8 @@ br {
 #landline_container {
   width: ~"calc(100% - 110px)";
   float: left;
+  margin-left: auto;
+  margin-right: auto;
 
   @media @mobile {
     float: none;
@@ -132,6 +139,7 @@ br {
 
     @media @mobile {
       font-size: 100%;
+      text-transform: none;
       &::after {
         content: ":";
       }
@@ -163,7 +171,6 @@ br {
     white-space: nowrap;
 
     @media @mobile {
-      font-weight: normal;
       font-size: 100%;
       display: inline;
     }
@@ -174,7 +181,7 @@ br {
 .statename {
   text-transform: uppercase;
   padding: 0 0 5px 0;
-  border-bottom: 1px solid #DDD;
+  //border-bottom: 1px solid #DDD;
   margin-bottom: 5px;
   color:#767f8f;
   color: #222;
