@@ -124,13 +124,15 @@ br {
   }
 
   .desc {
-    font-size: 80%;
-    color:#65696e;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #555;
     display: inline;
 
 
     @media @mobile {
-      font-size: 100%;
+      //font-size: 100%;
+      
       &::after {
         content: ":";
       }
@@ -139,6 +141,8 @@ br {
 
   .subhead {
     display: block;
+    text-transform: none;
+
     @media @mobile {
       display: inline;
 
@@ -155,7 +159,7 @@ br {
   .titlenum {
     font-weight: bold;
     font-size: 130%;
-    color:#3b4f56;
+    color: #222;
     padding-top: 3px;
     white-space: nowrap;
 
@@ -171,10 +175,10 @@ br {
 .statename {
   text-transform: uppercase;
   padding: 0 0 5px 0;
-  border-bottom: 1px solid #c2c4c2;
+  //border-bottom: 1px solid #CCC;
   margin-bottom: 5px;
-  color:#767f8f;
-  font-size: 110%;
+  color: #222;
+  font-size: 120%;
   font-weight: bold;
   text-align: center;
   margin-right: auto;
