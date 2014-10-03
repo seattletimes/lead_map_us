@@ -6,17 +6,37 @@
 }
 
 @mobile: ~"(max-width: 480px)";
+@serif: Georgia, Times, serif;
+@sans-serif: Arial, Helvetica, sans-serif;
+@hed: "Archivo Black", Arial;
+@display: "Oswald", Arial;
+@condensed: "Roboto Condensed", Arial;
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 85%;
+  font-family: @condensed;
+  font-size: 16px;
+  color: #222;
   overflow: auto;
   margin: 0;
   padding: 0;
 }
 
+h4.title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: @hed;
+  margin: 0 0 1em 0;
+
+  .statename {
+    text-transform: uppercase;
+    display: block;
+    font-size: 22px;
+  }
+}
+
 .legend {
   text-align: left;
+  font-size: 14px;
   line-height: 20px;
   color: #555;
   margin: 0 0 10px 10px;
@@ -92,7 +112,6 @@ br {
 
 
 .hover {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   width: 100%;
   max-height: 90px;
   height: 90px;
@@ -116,15 +135,8 @@ br {
     padding: 0;
   }
 
-  &.small {
-    //width: 15%;
-    @media @mobile {
-      width: 100%;
-    }
-  }
-
   .desc {
-    font-size: 100%;
+    font-size: 18px;
     text-transform: uppercase;
     color: #555;
     display: inline;
@@ -141,6 +153,7 @@ br {
   .subhead {
     display: block;
     text-transform: none;
+    font-size: 14px;
 
     @media @mobile {
       display: inline;
@@ -157,8 +170,7 @@ br {
 
   .titlenum {
     font-weight: bold;
-    font-size: 140%;
-    color: #222;
+    font-size: 150%;
     padding-top: 3px;
     white-space: nowrap;
 
@@ -166,22 +178,5 @@ br {
       font-size: 100%;
       display: inline;
     }
-  }
-}
-
-
-.statename {
-  text-transform: uppercase;
-  padding: 0 0 5px 0;
-  //border-bottom: 1px solid #CCC;
-  margin-bottom: 5px;
-  color: #222;
-  font-size: 140%;
-  font-weight: bold;
-  text-align: center;
-  margin-right: auto;
-
-  @media @mobile {
-    text-align: left;
   }
 }
