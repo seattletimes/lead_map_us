@@ -23,14 +23,16 @@ body {
 
 h4.title {
   font-size: 18px;
-  font-weight: bold;
   font-family: @hed;
   margin: 0 0 1em 0;
 
   .statename {
     text-transform: uppercase;
     display: block;
-    font-size: 22px;
+
+    @media @mobile {
+      display: inline;
+    }
   }
 }
 
@@ -76,6 +78,7 @@ h4.title {
 
   @media @mobile {
     margin-top: 0;
+    padding-top: 10px;
     display: block;
     float: none;
     width: 100%;
@@ -136,7 +139,6 @@ br {
   }
 
   .desc {
-    font-size: 18px;
     text-transform: uppercase;
     color: #555;
     display: inline;
@@ -169,8 +171,7 @@ br {
   }
 
   .titlenum {
-    font-weight: bold;
-    font-size: 150%;
+    font-size: 110%;
     padding-top: 3px;
     white-space: nowrap;
 
