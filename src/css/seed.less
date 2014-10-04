@@ -6,6 +6,7 @@
 }
 
 @mobile: ~"(max-width: 480px)";
+@tablet: ~"(max-width: 768px)";
 @serif: Georgia, Times, serif;
 @sans-serif: Arial, Helvetica, sans-serif;
 @hed: "Archivo Black", Arial;
@@ -21,6 +22,10 @@ body {
   padding: 0;
 }
 
+br {
+  clear: both;
+}
+
 .legend {
   text-align: left;
   font-size: 14px;
@@ -32,7 +37,7 @@ body {
     border: none; 
     border-bottom: 1px dashed #ccc;
 
-    @media @mobile {
+    @media @tablet {
       display: none;
     }
   }
@@ -40,11 +45,12 @@ body {
   label {
     display: block;
 
-    @media @mobile {
+    @media @tablet {
       float: left;
-      width: 30%;
+      width: 20%;
       margin-bottom: 4px;
     }
+
   }
 
   i {
@@ -61,7 +67,7 @@ body {
   width: 80px;
   margin-right: 20px;
 
-  @media @mobile {
+  @media @tablet {
     margin-top: 0;
     padding-top: 10px;
     display: block;
@@ -71,27 +77,21 @@ body {
   }
 }
 
-hr {
-  border: 0;
-  border-bottom: 1px dashed #ccc;
-  margin: 3px;
-}
-
-br {
-  clear: both;
-}
-
 #landline_container {
   width: ~"calc(60% - 110px)";
   float: left;
   margin-left: auto;
   margin-right: auto;
 
-  @media @mobile {
-    float: none;
+  @media @tablet {
     display: block;
+    width: 50%;
+  }
+
+  @media @mobile {
     width: 100%;
     clear: both;
+    float: none;
   }
 }
 
@@ -103,14 +103,12 @@ br {
 .hover {
   width: 40%;
   float: left;
-  //max-height: 90px;
-  //height: 90px;
   text-align: center;
   top: 0;
   left: 0;
 
-  @media @mobile {
-    width: 100%;
+  @media @tablet {
+    width: 50%;
     padding: 8px;
     text-align: left;
   }
@@ -121,7 +119,7 @@ br {
   text-transform: uppercase;
   font-family: @hed;
 
-  @media @mobile {
+  @media @tablet {
     margin: 0;
   }
 }
@@ -131,7 +129,7 @@ br {
   width: 50%;
   float: left;
 
-  @media @mobile {
+  @media @tablet {
     width: 100%;
     padding: 0;
   }
@@ -142,7 +140,7 @@ br {
     display: inline;
 
 
-    @media @mobile {
+    @media @tablet {
       
       &::after {
         content: ":";
@@ -155,7 +153,7 @@ br {
     text-transform: none;
     font-size: 14px;
 
-    @media @mobile {
+    @media @tablet {
       display: inline;
 
       &::before {
@@ -171,9 +169,8 @@ br {
   .titlenum {
     font-size: 150%;
     padding-top: 3px;
-    white-space: nowrap;
 
-    @media @mobile {
+    @media @tablet {
       font-size: 100%;
       display: inline;
     }
