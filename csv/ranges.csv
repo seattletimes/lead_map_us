@@ -21,15 +21,15 @@ key,state,postal,inspected,totalInspections,violations,leadRelated,penalty,curre
 23,Maine,ME,0,0,0,0,0,0
 24,Maryland,MD,1,1,8,5,0,0
 25,Massachusetts,MA,0,0,0,0,0,0
-26,Michigan,MI,13,21,103,83,47375,25137.45
+26,Michigan,MI,11,19,97,79,46925,24912.45
 27,Minnesota,MN,7,9,34,27,33550,15230
 28,Mississippi,MS,0,0,0,0,0,0
 29,Missouri,MO,4,4,20,17,29405,18200
 30,Montana,MT,0,0,0,0,0,0
 31,Nebraska,NE,1,2,9,8,11925,8122.5
-32,Nevada,NV,13,30,106,68,176782,96004.8
-33,New Hampshire,NH,3,4,49,39,17500,5750
-34,New Jersey,NJ,2,3,22,14,16000,10750
+32,Nevada,NV,12,29,101,68,176782,96004.8
+33,New Hampshire,NH,2,3,45,39,16750,5375
+34,New Jersey,NJ,1,1,17,14,16000,10750
 35,New Mexico,NM,1,2,4,4,600,600
 36,New York,NY,3,5,16,2,0,0
 37,North Carolina,NC,14,18,130,106,25400,13685
@@ -42,7 +42,7 @@ key,state,postal,inspected,totalInspections,violations,leadRelated,penalty,curre
 45,South Carolina,SC,6,8,51,51,18550,5025
 46,South Dakota,SD,0,0,0,0,0,0
 47,Tennessee,TN,12,14,154,121,10250,8888
-48,Texas,TX,10,12,103,80,177410,99225
+48,Texas,TX,9,12,103,80,177410,99225
 49,Utah,UT,1,1,10,10,1470,588
 50,Vermont,VT,0,0,0,0,0,0
 51,Virginia,VA,10,20,168,117,102155,44968
@@ -50,4 +50,4 @@ key,state,postal,inspected,totalInspections,violations,leadRelated,penalty,curre
 54,West Virginia,WV,0,0,0,0,0,0
 55,Wisconsin,WI,2,2,5,2,7700,4250
 56,Wyoming,WY,1,1,0,0,0,0
-US,United States,US,208,306,"1,964","1,529",1983350,895817.35
+US,United States,US,202,300,1944,1525,1982150,895217.35
