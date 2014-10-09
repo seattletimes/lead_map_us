@@ -1,3 +1,4 @@
+/*global census, ich, Landline*/
 require([
   "pym",
   "text!_tooltip.html",
@@ -43,12 +44,13 @@ require([
     if (income > 10) return "#7c8389";
     if (income > 5) return "#c1bfc1";
     if (income > 0) return "#e0e0e1";
-    if (income == 0) return "#d38b82";
-    return "rgb(0,109,44)";
+    return "#d38b82";
   };
 
   for (var fips in census) {
     var state = census[fips];
+    state.violations = (state.violations * 1).toLocaleString();
+    state.leadRelated = (state.leadRelated * 1).toLocaleString();
     state.penalty = Math.round(state.penalty * 1).toLocaleString();
     state.currentPenalty = Math.round(state.currentPenalty * 1).toLocaleString();
     map.style(fips, "fill", stateColor(state.inspected));
