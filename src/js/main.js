@@ -22,9 +22,14 @@ require([
   ich.addTemplate("tooltip", tooltip);
   
   var map = new Landline.Stateline("#landline_container", "states");
+  var lastPath = null;
 
   map.on('mouseover', function(e, path, data) {
     path.attr("stroke", "#1a1a1a").attr("stroke-width", 3);
+    if (lastPath && path != lastPath) {
+      lastPath.attr("stroke", "white").attr("stroke-width", 1);
+    }
+    lastPath = path;
     path.toFront();
   });
 
@@ -35,6 +40,14 @@ require([
   map.on('mouseout', function(e, path, data) {
     $("#landline_tooltip").hide();
     path.attr("stroke", "white").attr("stroke-width", 1);
+    hover.html(ich.tooltip(census.US));
+  });
+
+  $("svg").on("mouseleave", function() {
+    $("svg path").each(function(i, path) {
+      path.setAttribute("stroke", "white");
+      path.setAttribute("stroke-width", 1);
+    });
     hover.html(ich.tooltip(census.US));
   });
 
