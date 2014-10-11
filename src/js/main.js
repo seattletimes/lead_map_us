@@ -23,10 +23,11 @@ require([
   
   var map = new Landline.Stateline("#landline_container", "states");
   var lastPath = null;
+  var isIE = navigator.userAgent.indexOf("Trident") > -1;
 
   map.on('mouseover', function(e, path, data) {
     path.attr("stroke", "#1a1a1a").attr("stroke-width", 3);
-    if (lastPath && path != lastPath) {
+    if (isIE && lastPath && path != lastPath) {
       lastPath.attr("stroke", "white").attr("stroke-width", 1);
     }
     lastPath = path;
@@ -43,13 +44,17 @@ require([
     hover.html(ich.tooltip(census.US));
   });
 
-  $("svg").on("mouseleave", function() {
-    $("svg path").each(function(i, path) {
-      path.setAttribute("stroke", "white");
-      path.setAttribute("stroke-width", 1);
+  //This is a hack around IE events on SVG DOM
+  //it's a bad idea and we should feel bad for doing it.
+  if (isIE) {
+    $("svg").on("mouseleave", function() {
+      $("svg path").each(function(i, path) {
+        path.setAttribute("stroke", "white");
+        path.setAttribute("stroke-width", 1);
+      });
+      hover.html(ich.tooltip(census.US));
     });
-    hover.html(ich.tooltip(census.US));
-  });
+  }
 
   var stateColor = function(income) {
     if (income > 20) return "#3c5056";
