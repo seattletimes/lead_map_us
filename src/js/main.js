@@ -65,12 +65,17 @@ require([
     return "#d38b82";
   };
 
+  var commafy = function(n) {
+    //would prefer to use the options in toLocaleString, but isn't in IE<11
+    return (n * 1).toLocaleString().replace(/\.0+$/, "");
+  };
+
   for (var fips in census) {
     var state = census[fips];
-    state.violations = (state.violations * 1).toLocaleString();
-    state.leadRelated = (state.leadRelated * 1).toLocaleString();
-    state.penalty = Math.round(state.penalty * 1).toLocaleString();
-    state.currentPenalty = Math.round(state.currentPenalty * 1).toLocaleString();
+    state.violations = commafy((state.violations));
+    state.leadRelated = commafy((state.leadRelated));
+    state.penalty = commafy(Math.round(state.penalty));
+    state.currentPenalty = commafy(Math.round(state.currentPenalty));
     map.style(fips, "fill", stateColor(state.inspected));
     map.style(fips, "stroke-width", 1);
   }
